@@ -1,0 +1,28 @@
+{
+  "name": "cypress-training",
+  "version": "1.0.0",
+  "description": "This is a Workshop about Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test:open": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mafeZapata/cypress-training.git"
+  },
+  "keywords": [
+    "ui-testing",
+    "dojo",
+    "practice",
+    "cypress"
+  ],
+  "author": "Maria Fernanda Zapata mafez0427@gmail.com mafeZapata",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mafeZapata/cypress-training/issues"
+  },
+  "homepage": "https://github.com/mafeZapata/cypress-training#readme",
+  "devDependencies": {
+    "cypress": "^10.3.0"
+  }
+}

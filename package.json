@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/mafeZapata/cypress-training#readme",
   "devDependencies": {
-    "cypress": "^10.3.0"
+    "cypress": "^9.7.0"
   }
 }

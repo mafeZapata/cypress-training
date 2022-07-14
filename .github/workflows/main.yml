@@ -2,7 +2,7 @@ name: Continous Integration for the Workshop
 
 on:
   pull_request:
-    branches: [ "main" ]
+
 
 jobs:
  cypress-run:

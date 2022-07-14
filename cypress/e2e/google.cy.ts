@@ -3,5 +3,5 @@ describe("This is my first cypress test", () => {
     cy.visit("https://www.google.com/");
     cy.title().should("eq", "Google");
   });
-
+});
 

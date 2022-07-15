@@ -24,7 +24,6 @@ jobs:
     #Check code style
       - name: Code style revision
         run: npm run lint -- --fix
-        run: npm run lint
         
     #Run test E2E
       - name: Test e2E

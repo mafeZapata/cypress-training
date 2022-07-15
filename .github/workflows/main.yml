@@ -9,7 +9,7 @@ jobs:
     steps:
     # obtain the repository
       - name: Check out repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
     #preparing the enviroment for uses a specific version of node.js with npm for package management
       - name: Setup Workflow
         uses: actions/setup-node@v2
@@ -21,6 +21,7 @@ jobs:
         run: npm ci
     #Check code style
       - name: Code style revision
+        run: npm run lint -- --fix
         run: npm run lint
         
     #Run test E2E

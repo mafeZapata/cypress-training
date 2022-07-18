@@ -6,12 +6,12 @@ import {
   PaymentStepPage,
   ProductsListPage,
   ShippingStepPage,
-  ShopingCartPage,
+  ShoppingCartPage,
 } from "../page/index";
 
 const menuContentPage = new MenuContentPage();
 const productsListPage = new ProductsListPage();
-const shopingCartPage = new ShopingCartPage();
+const shoppingCartPage = new ShoppingCartPage();
 const loginPage = new LoginPage();
 const addressStepPage = new AddressStepPage();
 const shippingStepPage = new ShippingStepPage();
@@ -23,8 +23,8 @@ describe("Buy a t-shirt", () => {
     menuContentPage.visitMenuContentPage();
     menuContentPage.goToTShirtMenu();
     productsListPage.addTShirtToCart();
-    shopingCartPage.goToCartPage();
-    shopingCartPage.goToCheckoutPage();
+    shoppingCartPage.goToCartPage();
+    shoppingCartPage.goToCheckoutPage();
     loginPage.login("aperdomobo@gmail.com", "WorkshopProtractor");
     addressStepPage.goToShippingStep();
     shippingStepPage.acceptTermsAndConditions();

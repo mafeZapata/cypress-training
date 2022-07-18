@@ -1,4 +1,4 @@
-class ShopingCartPage {
+class ShoppingCartPage {
     private goToCartBtn: string;
     private goToCheckoutBtn: string;
 
@@ -16,4 +16,4 @@ class ShopingCartPage {
     }
 }
 
-export { ShopingCartPage }
+export { ShoppingCartPage }

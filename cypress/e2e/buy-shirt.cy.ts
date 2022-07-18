@@ -33,6 +33,5 @@ describe("Buy a t-shirt", () => {
     paymentStepPage.confirmOrder();
 
     paymentStepPage.getOrderLabel().should("have.text", "Your order on My Store is complete."); ;
-
   });
 });

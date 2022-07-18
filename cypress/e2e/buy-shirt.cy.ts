@@ -19,8 +19,7 @@ describe("Buy a t-shirt", () => {
 
     cy.get(".cart_navigation > .button").click();
 
-    cy.get("#HOOK_PAYMENT > div:nth-child(1) > div > p > a").click();
-
+    cy.get(".bankwire").click();
     cy.get("#cart_navigation > .button").click();
 
     cy.get("#center_column > div > p > strong")

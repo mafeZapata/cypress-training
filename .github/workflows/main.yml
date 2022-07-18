@@ -1,35 +1,28 @@
-name: Continous Integration for the Workshop
+name: Continuous integration
 
-on:
-  pull_request:
-
+on: [pull_request]
 
 jobs:
- cypress-run:
+  cypress-run:
     runs-on: ubuntu-latest
-
-   
     steps:
-    # obtain the repository
-      - name: Check out repository
-        uses: actions/checkout@v3
-    #preparing the enviroment for uses a specific version of node.js with npm for package management
-      - name: Setup Workflow
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup
         uses: actions/setup-node@v2
         with:
           node-version: 16
           cache: 'npm'
-    #Installing dependencies
-      - name: Install dependencies
+
+      - name: Install
         run: npm ci
-    #Check code style
-      - name: Code style revision
-        run: npm run lint
-        
-    #Run test E2E
-      - name: Test e2E
+
+      - name: Code style
+        run: npm run lint 
+
+      - name: UI E2E Tests
         uses: cypress-io/github-action@v4
         with:
           browser: chrome
           headless: true
-          

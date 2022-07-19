@@ -3,7 +3,6 @@ class ShoppingCartPage {
     private goToCheckoutBtn: string;
 
     constructor() {
-
         this.goToCartBtn = ".button-container > .button-medium";
         this.goToCheckoutBtn = ".cart_navigation span";
     }

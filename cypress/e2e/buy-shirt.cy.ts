@@ -11,11 +11,11 @@ import {
 
 const menuContentPage = new MenuContentPage();
 const productsListPage = new ProductsListPage();
-const shoppingCartPage = new ShoppingCartPage();
 const loginPage = new LoginPage();
 const addressStepPage = new AddressStepPage();
 const shippingStepPage = new ShippingStepPage();
 const paymentStepPage = new PaymentStepPage();
+const shoppingCartPage = new ShoppingCartPage();
 
 
 describe("Buy a t-shirt", () => {
@@ -31,7 +31,6 @@ describe("Buy a t-shirt", () => {
     shippingStepPage.goToPaymentStep();
     paymentStepPage.selectPaymentMethod();
     paymentStepPage.confirmOrder();
-
     paymentStepPage.getOrderLabel().should("have.text", "Your order on My Store is complete."); ;
   });
 });

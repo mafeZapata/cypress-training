@@ -23,7 +23,7 @@ describe("Buy a t-shirt", () => {
     menuContentPage.visitMenuContentPage();
     menuContentPage.goToTShirtMenu();
     productsListPage.addTShirtToCart();
-    shoppingCartPage.goToCartPage();
+    productsListPage.goToCartPage();
     shoppingCartPage.goToCheckoutPage();
     loginPage.login("aperdomobo@gmail.com", "WorkshopProtractor");
     addressStepPage.goToShippingStep();

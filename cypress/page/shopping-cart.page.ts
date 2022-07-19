@@ -3,7 +3,7 @@ class ShoppingCartPage {
     private goToCheckoutBtn: string;
 
     constructor() {
-        this.goToCartBtn = "[style*='display: block;'] .button-container > a";
+        this.goToCartBtn = ".button-container > .button-medium";
         this.goToCheckoutBtn = ".cart_navigation span";
     }
 

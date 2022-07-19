@@ -1,12 +1,12 @@
 class ShoppingCartPage {
-    private goToCheckoutBtn: string;
+    private goCheckoutBtn: string;
 
     constructor() {
-        this.goToCheckoutBtn = ".cart_navigation span";
+        this.goCheckoutBtn = ".cart_navigation > .standard-checkout";
     }
 
     public goToCheckoutPage(): void {
-        cy.get(this.goToCheckoutBtn).click();
+        cy.get(this.goCheckoutBtn).click();
     }
 }
 

@@ -1,10 +1,10 @@
 class ProductsListPage {
     private addToCartBtn: string;
-    private goToCartBtn: string;
+    private goToCheckBtn: string;
 
     constructor() {
         this.addToCartBtn = ".ajax_add_to_cart_button";
-        this.goToCartBtn = ".button-container > .button-medium";
+        this.goToCheckBtn = ".button-container > .button-medium";
 
     }
 
@@ -12,8 +12,8 @@ class ProductsListPage {
         cy.get(this.addToCartBtn).click();
     }
 
-    public goToCartPage(): void {
-        cy.get(this.goToCartBtn).click();
+    public goToCheckPage(): void {
+        cy.get(this.goToCheckBtn).click();
     }
 }
 

@@ -5,6 +5,7 @@ class ShippingStepPage {
     constructor() {
         this.termsAndConditionsCheckbox = "#cgv";
         this.continueCheckoutBtn = ".cart_navigation > .button[name='processCarrier']";
+
     }
 
     public acceptTermsAndConditions(): void {

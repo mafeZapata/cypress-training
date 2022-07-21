@@ -2,13 +2,12 @@
 import {
   AddressStepPage,
   LoginPage,
-  MenuContentPage,
   PaymentStepPage,
+  MenuContentPage,
   ProductsListPage,
   ShippingStepPage,
   ShoppingCartPage,
 } from "../page/index";
-
 
 describe("Buy a t-shirt", () => {
   let addressStepPage: AddressStepPage;

@@ -4,7 +4,7 @@ class MenuContentPage {
     private dressesMenu: string;
 
     constructor() {
-        this.tShirtMenu = "#block_top_menu > ul > li > a[title='T-shirts']";
+        this.tShirtMenu = "#block_top_menu > .sf-menu > li > a[title='T-shirts']";
         this.dressesMenu = "#block_top_menu > .sf-menu > li > a[title='Dresses']";
         this.menuContentPageURL = "http://automationpractice.com/";
 

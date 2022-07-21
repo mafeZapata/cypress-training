@@ -2,8 +2,8 @@
 import {
   AddressStepPage,
   LoginPage,
-  MenuContentPage,
   PaymentStepPage,
+  MenuContentPage,
   ProductsListPage,
   ShippingStepPage,
   ShoppingCartPage,

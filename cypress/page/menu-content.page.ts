@@ -3,7 +3,6 @@ class MenuContentPage {
     private menuContentPageURL: string
     private dressesMenu: string;
 
-
     constructor() {
         this.tShirtMenu = "#block_top_menu > ul > li > a[title='T-shirts']";
         this.dressesMenu = "#block_top_menu > .sf-menu > li > a[title='Dresses']";
@@ -17,7 +16,6 @@ class MenuContentPage {
     public goToTShirtMenu(): void {
         cy.get(this.tShirtMenu).click()
     }
-
 
     public goToDressesMenu(): void{
         cy.get(this.dressesMenu).click()

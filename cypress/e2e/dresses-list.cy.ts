@@ -1,7 +1,8 @@
 import {MenuContentPage, DressesListPage} from "../page/index";
 
 const expectedDressNames = [
-  "Printed Dress", "Printed Dress",
+  "Printed Dress", 
+  "Printed Dress",
   "Printed Summer Dress",
   "Printed Summer Dress",
   "Printed Chiffon Dress",

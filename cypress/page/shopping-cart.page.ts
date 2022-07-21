@@ -1,18 +1,12 @@
 class ShoppingCartPage {
-    private goToCartBtn: string;
-    private goToCheckoutBtn: string;
+    private goCheckoutBtn: string;
 
     constructor() {
-        this.goToCartBtn = "[style*='display: block;'] .button-container > a";
-        this.goToCheckoutBtn = ".cart_navigation span";
-    }
-
-    public goToCartPage(): void {
-        cy.get(this.goToCartBtn).click();
+        this.goCheckoutBtn = ".cart_navigation > .standard-checkout";
     }
 
     public goToCheckoutPage(): void {
-        cy.get(this.goToCheckoutBtn).click();
+        cy.get(this.goCheckoutBtn).click();
     }
 }
 

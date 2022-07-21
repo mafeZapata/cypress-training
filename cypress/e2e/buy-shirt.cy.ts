@@ -9,16 +9,6 @@ import {
   ShoppingCartPage,
 } from "../page/index";
 
-const menuContentPage = new MenuContentPage();
-const productsListPage = new ProductsListPage();
-const shoppingCartPage = new ShoppingCartPage();
-const loginPage = new LoginPage();
-const addressStepPage = new AddressStepPage();
-const shippingStepPage = new ShippingStepPage();
-const paymentStepPage = new PaymentStepPage();
-
-<<<<<<< Updated upstream
-=======
 describe("Try to buy a t-shirt", () => {
   let addressStepPage: AddressStepPage;
   let loginPage: LoginPage;
@@ -38,14 +28,12 @@ describe("Try to buy a t-shirt", () => {
     paymentStepPage = new PaymentStepPage();
     menuContentPage.visitMenuContentPage();
   });
->>>>>>> Stashed changes
 
-describe("Buy a t-shirt", () => {
-  it("then should be bought a t-shirt", () => {
+  it("try to buy a T-shirt", () => {
     menuContentPage.visitMenuContentPage();
     menuContentPage.goToTShirtMenu();
     productsListPage.addTShirtToCart();
-    shoppingCartPage.goToCartPage();
+    productsListPage.goToCheckPage();
     shoppingCartPage.goToCheckoutPage();
     loginPage.login("aperdomobo@gmail.com", "WorkshopProtractor");
     addressStepPage.goToShippingStep();
@@ -53,7 +41,7 @@ describe("Buy a t-shirt", () => {
     shippingStepPage.goToPaymentStep();
     paymentStepPage.selectPaymentMethod();
     paymentStepPage.confirmOrder();
-
-    paymentStepPage.getOrderLabel().should("have.text", "Your order on My Store is complete."); ;
+    paymentStepPage.getOrderLabel().should("have.text", "Your order on My Store is complete.");
   });
 });
+

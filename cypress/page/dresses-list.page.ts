@@ -1,5 +1,4 @@
 class DressesListPage {
-
   private dressItem: string;
   private dressName: string;
 

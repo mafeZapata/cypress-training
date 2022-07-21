@@ -9,7 +9,7 @@ import {
   ShoppingCartPage,
 } from "../page/index";
 
-describe("Try to buy a t-shirt", () => {
+describe("Buy a t-shirt", () => {
   let addressStepPage: AddressStepPage;
   let loginPage: LoginPage;
   let menuContentPage: MenuContentPage;

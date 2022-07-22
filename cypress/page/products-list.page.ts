@@ -7,7 +7,6 @@ class ProductsListPage {
         this.addToCartBtn = ".ajax_add_to_cart_button";
         this.goToCheckBtn = ".button-container > .button-medium";
         this.allProducts = ".product-container";
-
     }
 
     public addTShirtToCart(productName: string): void {

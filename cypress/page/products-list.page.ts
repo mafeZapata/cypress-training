@@ -1,8 +1,8 @@
 class ProductsListPage {
+    private allProducts: string;
     private addToCartBtn: string;
     private goToCheckBtn: string;
-    private allProducts: string;
-
+    
     constructor() {
         this.addToCartBtn = ".ajax_add_to_cart_button";
         this.goToCheckBtn = ".button-container > .button-medium";

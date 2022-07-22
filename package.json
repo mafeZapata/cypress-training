@@ -8,6 +8,7 @@
     "lint": "eslint ./cypress/e2e/**/*.ts",
     "lint:fix": "npm run lint -- --fix",
     "test": "cypress run"
+
   },
   "repository": {
     "type": "git",

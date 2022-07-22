@@ -13,7 +13,7 @@ class ProductsListPage {
         this.findProductByName(productName).find(this.addToCartBtn).click();
     }
 
-    public findProductByName(productName: string) {
+    private findProductByName(productName: string) {
         return cy.get(this.allProducts).filter(`:contains("${productName}")`)
     }
 

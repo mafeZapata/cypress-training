@@ -24,6 +24,6 @@ export default defineConfig({
         html: false,
         json: true,
       },
-    },
+    }
   }     
 })

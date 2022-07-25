@@ -21,7 +21,7 @@ class PersonalFormPage {
     private currentAdress: string;
     private state: string;
     private city: string;
-    private modalTitle: string
+    private modalTitle: string;
 
     constructor() {
         this.personalInfoFormUrl = "https://demoqa.com/automation-practice-form";

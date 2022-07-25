@@ -12,7 +12,7 @@ const personalInformation = {
   hobbies: ["Music", "Reading"],
   currentAddress: "Av siempreViva # 123",
   state: "Haryana",
-  city: "Karnl",
+  city: "Karnal",
 };
 
 describe("try to summit a form", () => {

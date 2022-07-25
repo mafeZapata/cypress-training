@@ -1,40 +1,38 @@
 interface PersonalInformation {
-    name: string;
-    lastName: string;
-    email: string;
-    gender: string;
-    dateOfBirth: string;
-    mobileNumber: string;
-    hobbies: string[];
-    currentAddress: string;
+    name: string
+    lastName: string
+    email: string
+    gender: string
+    mobileNumber: string
+    dateOfBirth: string
+    hobbies: string[]
+    currentAddress: string
+    state: string
+    city: string
 }
 
 class PersonalFormPage {
-    private personalInfoFormUrl: string;
-    private nameInput: string;
-    private lastnameInput: string;
-    private emailInput: string;
-    private genderRadioBtn: string;
-    private dateOfBirthPicker: string;
-    private datePickerValues: string[];
-    private mobileNumberInput: string;
-    private hobbiesCheckbox: string;
-    private currentAddressInput: string;
-    private submitBtn: string;
+    private personalInfoFormUrl: string
+    private firstName: string;
+    private lastName: string;
+    private email: string;
+    private mobileNumber: string;
+    private dateOfBirth: string;
+    private currentAdress: string;
+    private state: string;
+    private city: string;
     private modalTitle: string;
 
     constructor() {
         this.personalInfoFormUrl = "https://demoqa.com/automation-practice-form";
-        this.nameInput = "#firstName";
-        this.lastnameInput = "#lastName";
-        this.emailInput = "#userEmail";
-        this.genderRadioBtn = '[name="gender"]';
-        this.dateOfBirthPicker = "#dateOfBirthInput";
-        this.datePickerValues = [".react-datepicker__year-select", ".react-datepicker__month-select", ".react-datepicker__day"];
-        this.mobileNumberInput = "#userNumber";
-        this.hobbiesCheckbox = '.custom-checkbox';
-        this.currentAddressInput = "#currentAddress";
-        this.submitBtn = "#submit";
+        this.firstName = "#firstName";
+        this.lastName = "#lastName";
+        this.email = "#userEmail";
+        this.mobileNumber = "#userNumber";
+        this.dateOfBirth = "#dateOfBirthInput";
+        this.currentAdress = "#currentAddress";
+        this.state = "#react-select-3-input";
+        this.city = "#react-select-4-input";
         this.modalTitle = "#example-modal-sizes-title-lg";
     }
 
@@ -43,25 +41,35 @@ class PersonalFormPage {
     }
 
     public fillForm(personalInformation: PersonalInformation): void {
-        cy.get(this.nameInput).type(personalInformation.name);
-        cy.get(this.lastnameInput).type(personalInformation.lastName);
-        cy.get(this.emailInput).type(personalInformation.email);
-        cy.get(this.genderRadioBtn).check(personalInformation.gender, {force: true});
-        this.fillDateInput(personalInformation.dateOfBirth);
-        cy.get(this.mobileNumberInput).type(personalInformation.mobileNumber);
-        personalInformation.hobbies.forEach(hobbie =>{
-            cy.get(this.hobbiesCheckbox).filter(`:contains("${hobbie}")`).click();
-        });
-        cy.get(this.currentAddressInput).type(personalInformation.currentAddress);
-        cy.get(this.submitBtn).click({force: true});
+        cy.get(this.firstName).type(personalInformation.name);
+        cy.get(this.lastName).type(personalInformation.lastName);
+        cy.get(this.email).type(personalInformation.email);
+        cy.contains(personalInformation.gender).click()
+        cy.get(this.mobileNumber).type(personalInformation.mobileNumber);
+        cy.get(this.dateOfBirth).type(`{selectall}${personalInformation.dateOfBirth}{enter}`);
+        this.setHobbies(personalInformation.hobbies);
+        cy.get(this.currentAdress).type(personalInformation.currentAddress);
+        cy.get(this.state).focus().type(`${personalInformation.state}{enter}`);
+        cy.get(this.city).focus().type(`${personalInformation.city}{enter}`);
+        cy.get("#userForm").submit();
     }
 
-    private fillDateInput(date: string){
-        const newdate = new Date(date);
-        cy.get(this.dateOfBirthPicker).click();
-        cy.get(this.datePickerValues[0]).select(`${newdate.getFullYear()}`);
-        cy.get(this.datePickerValues[1]).select(`${newdate.toLocaleString('default', { month: 'long' })}`);
-        cy.get(this.datePickerValues[2]).filter(`:contains("${newdate.getDate()}")`).eq(0).click()
+    private setHobbies(userHobbies: string[]): void {
+        userHobbies.forEach(element => {
+            cy.contains(element).click();
+        });
+    }
+
+
+    public checkForm(PersonalInformation: PersonalInformation) {
+        cy.get('.modal').contains(PersonalInformation.name);
+        cy.get('.modal').contains(PersonalInformation.lastName);
+        cy.get('.modal').contains(PersonalInformation.email);
+        cy.get('.modal').contains(PersonalInformation.gender);
+        cy.get('.modal').contains(PersonalInformation.dateOfBirth);
+        cy.get('.modal').contains(PersonalInformation.currentAddress);
+        cy.get('.modal').contains(PersonalInformation.state);
+        cy.get('.modal').contains(PersonalInformation.city); 
     }
 
     public getModalTitle() {

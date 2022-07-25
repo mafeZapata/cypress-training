@@ -11,6 +11,8 @@ const personalInformation = {
   mobileNumber: "3656589156",
   hobbies: ["Music", "Reading"],
   currentAddress: "Av siempreViva # 123",
+  state: "Haryana",
+  city: "Karnal",
 };
 
 describe("try to summit a form", () => {
@@ -21,7 +23,7 @@ describe("try to summit a form", () => {
     personalFormPage.visitPersonalInfoFormPage();
   });
 
-  it("then the t-shirt should be bought", () => {
+  it("Try to summit a form", () => {
     personalFormPage.fillForm(personalInformation);
     personalFormPage.getModalTitle().should("have.text", "Thanks for submitting the form");
   });

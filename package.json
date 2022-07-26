@@ -5,35 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test:open": "npm run lint && cypress open",
-    "pretest": "rm -rf cypress/reports/*",
-    "test": "cypress run",
-    "posttest": "npm run combine:reports && npm run generate:reports",
     "lint": "eslint ./cypress/e2e/**/*.ts",
     "lint:fix": "npm run lint -- --fix",
-    "combine:reports": "mochawesome-merge cypress/reports/mocha/*.json > cypress/reports/report.json",
-    "generate:reports": "marge cypress/reports/report.json -f report -o cypress/reports"
+    "test": "cypress run"
+
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mafeZapata/cypress-training.git"
-  },
-  "keywords": [
-    "ui-testing",
-    "dojo",
-    "practice",
-    "cypress"
-  ],
-  "author": "Maria Fernanda Zapata mafez0427@gmail.com mafeZapata",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mafeZapata/cypress-training/issues"
-  },
-  "homepage": "https://github.com/mafeZapata/cypress-training#readme",
-  "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.30.6",
     "@typescript-eslint/parser": "^5.30.6",
     "cypress": "^10.3.0",
-    "cypress-file-upload": "^5.0.8",
     "cypress-mochawesome-reporter": "^3.2.0",
     "cypress-multi-reporters": "^1.6.1",
     "eslint": "^8.19.0",
@@ -44,8 +25,5 @@
     "mochawesome-merge": "^4.2.1",
     "mochawesome-report-generator": "^6.2.0",
     "typescript": "^4.7.4"
-  },
-  "dependencies": {
-    "lodash": "^4.17.21"
   }
 }

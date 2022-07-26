@@ -4,9 +4,9 @@ class UploadPage {
     private titleSelector: string;
 
     constructor() {
-        this.uploadPageURL = "http://demo.automationtesting.in/FileUpload.html"
-        this.btnUpload = "#input-4";
-        this.titleSelector = ".file-footer-caption";
+        this.uploadPageURL = "https://the-internet.herokuapp.com/upload"
+        this.btnUpload = "#file-upload";
+        this.titleSelector = "#file-submit.button";
     }
 
     public visitUploadPage(): void {
@@ -17,8 +17,8 @@ class UploadPage {
         cy.get(this.btnUpload).attachFile(fileName);
     }
 
-    public verifyFileName(filename: string): void {
-        cy.get(this.titleSelector).contains(filename);
+    public verifyFileName(): void {
+        cy.get(this.titleSelector).click();
     }
 }
 

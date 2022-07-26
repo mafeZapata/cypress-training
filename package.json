@@ -5,11 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test:open": "npm run lint && cypress open",
+    "pretest": "rm -rf cypress/reports/*",
+    "test": "cypress run",
+    "posttest": "npm run combine:reports && npm run generate:reports",
     "lint": "eslint ./cypress/e2e/**/*.ts",
     "lint:fix": "npm run lint -- --fix",
-    "test": "cypress run"
-
+    "combine:reports": "mochawesome-merge cypress/reports/mocha/*.json > cypress/reports/report.json",
+    "generate:reports": "marge cypress/reports/report.json -f report -o cypress/reports",
   },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mafeZapata/cypress-training.git"

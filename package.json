@@ -13,7 +13,6 @@
     "combine:reports": "mochawesome-merge cypress/reports/mocha/*.json > cypress/reports/report.json",
     "generate:reports": "marge cypress/reports/report.json -f report -o cypress/reports"
   },
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mafeZapata/cypress-training.git"

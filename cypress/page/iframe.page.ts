@@ -18,8 +18,8 @@ class IframePage {
         cy.wait(10000)
     }
 
-    public getFrameTitle(): void {
-        cy.iframe(this.iframe).find(this.titleIframe).invoke("text");
+    public getFrameTitle(): any {  
+        return cy.iframe(this.iframe).find("h1");
     }
 
     public goToCssPageInFrame(): void {

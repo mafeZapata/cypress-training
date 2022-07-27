@@ -1,6 +1,7 @@
 class IframePage {
     private ifrmaPageURL: string;
     private iframe: string;
+    private titleIframe: string;
     private titleText: string;
     private cssSelector: string;
 
@@ -8,6 +9,7 @@ class IframePage {
         this.ifrmaPageURL = "https://www.w3schools.com/html/html_iframe.asp";
         this.iframe = "[title=\"W3Schools HTML Tutorial\"]";
         this.titleText = "HTML Tutorial";
+        this.titleIframe = "#main h1";
         this.cssSelector = "[title=\"CSS Tutorial\"]";
     }
 
@@ -17,7 +19,7 @@ class IframePage {
     }
 
     public getFrameTitle(): void {
-        cy.iframe(this.iframe).find("h1").should("have.text", this.titleText);
+        cy.iframe(this.iframe).find(this.titleIframe).invoke("text");
     }
 
     public goToCssPageInFrame(): void {

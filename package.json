@@ -8,7 +8,6 @@
     "lint": "eslint ./cypress/e2e/**/*.ts",
     "lint:fix": "npm run lint -- --fix",
     "test": "cypress run"
-
   },
   "repository": {
     "type": "git",
@@ -18,6 +17,20 @@
     "cypress-mochawesome-reporter": "^3.2.0",
     "cypress-multi-reporters": "^1.6.1",
     "eslint": "^8.19.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-cypress": "^2.12.1",
+    "mocha": "^10.0.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.2.1",
+    "mochawesome-report-generator": "^6.2.0",
+    "typescript": "^4.7.4"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "@typescript-eslint/parser": "^5.31.0",
+    "cypress-mochawesome-reporter": "^3.2.0",
+    "cypress-multi-reporters": "^1.6.1",
+    "eslint": "^8.20.0",
     "eslint-config-google": "^0.14.0",
     "eslint-plugin-cypress": "^2.12.1",
     "mocha": "^10.0.0",

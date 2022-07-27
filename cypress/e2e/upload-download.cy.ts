@@ -9,7 +9,7 @@ describe("Test to upload and download a file", () => {
 
   it(" Try to Upload file", () => {
     uploadPage.visitUploadPage();
-    uploadPage.uploadFile(fileName);
-    uploadPage.verifyFileName();
+    uploadPage.verifyFile(fileName);
+    uploadPage.uploadFile();
   });
 });

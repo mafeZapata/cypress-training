@@ -21,6 +21,6 @@ describe("Test to upload and download a file", () => {
   it("Try to download file test", () => {
     downloadPage.visitDownloadPage();
     downloadPage.downloadFile();
-    downloadPage.verifyLoctionFile("sampleFile.jpeg");
+    downloadPage.verifyLocationFile("sampleFile.jpeg");
   });
 });

@@ -15,7 +15,7 @@ class DownloadPage {
         cy.get(this.btnGenerate).click();
     }
 
-    public verifyLoctionFile(fileName: string): void {
+    public verifyLocationFile(fileName: string): void {
         cy.readFile('./cypress/downloads/'+fileName).should('exist');
     }
 }

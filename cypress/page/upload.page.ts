@@ -13,11 +13,8 @@ class UploadPage {
         cy.visit(this.uploadPageURL)
     }
 
-    public verifyFile(fileName: string): void {
+    public uploadFile(fileName: string): void {
         cy.get(this.btnUpload).attachFile(fileName);
-    }
-
-    public uploadFile(): void {
         cy.get(this.titleSelector).click();
     }
 }

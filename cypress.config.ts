@@ -5,12 +5,12 @@ export default defineConfig({
   screenshotOnRunFailure: false,
   e2e: {
     setupNodeEvents(on, config) {
-      // modify config values examples
-      // config.defaultCommandTimeout = 10000
-
-      // IMPORTANT return the updated config object
+      config.defaultCommandTimeout = 20000
+      config.responseTimeout = 20000
+      
       return config;
     },
+    retries: 2,
     reporter: "cypress-multi-reporters",
     reporterOptions: {
       reporterEnabled: "mochawesome",

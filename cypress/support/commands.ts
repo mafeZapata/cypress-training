@@ -30,3 +30,5 @@ Cypress.on("uncaught:exception", (err, runnable) => {
 });
 
 import 'cypress-file-upload';
+
+import 'cypress-iframe';
